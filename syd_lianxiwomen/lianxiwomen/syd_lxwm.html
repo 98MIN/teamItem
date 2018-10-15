@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>联系我们_优格</title>
+    <link rel="stylesheet" href="./css/syd_lxwm.css">
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=5Vdct22Ndg2DwhBE1NZV9i9mygd5TfMR">
+        //v2.0版本的引用方式：src="http://api.map.baidu.com/api?v=2.0&ak=您的密钥"
+    </script>
+
+</head>
+
+<body>
+    <div class="contact">
+        <!-- 红线 -->
+        <div class="line_top"></div>
+        <!-- 内容 -->
+        <div class="container">
+            <!-- 地图 -->
+            <div id="map"></div>
+            <!-- 介绍 -->
+            <div class="yg_it">
+                <img src="./images/lxwm_logo.png">
+                <div class="yg_nr">
+                    <b>青岛优格花园餐饮管理股份有限公司</b>(股票代码Stock
+                    Code：833307）
+                    <br />
+                    Qingdao Yogurt Garden Restaurant
+                    Management Co.,Ltd
+
+                </div>
+                <div class="clear_float"></div>
+            </div>
+            <div class="yg_it2">
+                <span><img src="./images/lxwm_phone.png"></span>
+                <span><b>投资电话：4001-575-808</b>
+                    <br>Merchants Tel: 4001-575-808
+                </span>
+            </div>
+            <div class="yg_it2">
+                <span><img src="./images/lxwm_email.png"></span>
+                <span><b>邮箱：yogurt@yogurtchina.net</b>
+                    <br>E-mail: yogurt@yogurtchina.net
+                </span>
+            </div>
+            <div class="yg_it2">
+                <span><img src="./images/lxwm_dizhi.png"></span>
+                <span><b>中国 · 山东省青岛市市南区山东路9号深业大厦B座19AB</b>
+                    <br>No. 19AB , Shenye Building, No.9
+                    Shandong Road, Shinan District, Qingdao
+                    , China 266052
+                </span>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        // 创建地图实例  
+        var map = new BMap.Map("map");
+        // 创建点坐标
+        var point = new BMap.Point(120.401764,36.069273);
+        // 初始化地图，设置中心点坐标和地图级别   1-19
+        map.centerAndZoom(point, 15);
+        //导航控件
+        map.addControl(new BMap.NavigationControl());
+        //缩放控件
+        map.addControl(new BMap.ScaleControl());
+        //概览图控件
+        map.addControl(new BMap.OverviewMapControl());
+        //地图类型控件
+        map.addControl(new BMap.MapTypeControl());
+        //添加覆盖物
+        var mk = new BMap.Marker(point);
+        map.addOverlay(mk);
+        //允许鼠标滚轮放大缩小
+        map.enableScrollWheelZoom(true);
+
+        var label = new BMap.Label("青岛优格花园餐饮管理股份有限公司",{offset:new BMap.Size(20,-10)});
+        mk.setLabel(label);
+    </script>
+</body>
+
+</html>
