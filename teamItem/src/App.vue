@@ -1,21 +1,20 @@
 <template>
   <div id="app">
-		<zm-news></zm-news>
-		<hjy></hjy>
-		<syd></syd>
+		<v-header></v-header>
+		<router-view></router-view>
+		<v-footer></v-footer>
   </div>
 </template>
 
 <script>
-import zmNews from './components/zmNews'
-import hjy from './components/hjy'
-import syd from './components/syd'
+
+import vFooter from './components/footer'
+import vHeader from './components/header'
 export default {
 	name: 'App',
 	components: {
-		zmNews,
-		hjy,
-		syd
+		vFooter,
+		vHeader
 	}
 }
 </script>
@@ -27,5 +26,8 @@ export default {
 }
 #app{
 	width: 100%;
+}
+#header{
+	margin-bottom:20px;
 }
 </style>

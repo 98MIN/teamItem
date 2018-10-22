@@ -19,33 +19,33 @@ $(function () {
 /*---------------------------------------------------------------------*/
     /*第一部分*/
     /*轮播*/
-    function autoplay(){
-        timer=setInterval(function () {
-            index++;
-            if(index>3) index=0;
-            $(".co ul").animate({
-                left:-index* $(".co ul li").first().width()+"px"
-            });
-            buts.eq(index).trigger("hover");
-            buts.eq(index).trigger("click");
-        },3000);
+     function autoplay(){
+         timer=setInterval(function () {
+             index++;
+             if(index>3) index=0;
+             $(".co ul").animate({
+                 left:-index* $(".co ul li").first().width()+"px"
+             });
+             buts.eq(index).trigger("hover");
+             buts.eq(index).trigger("click");
+         },3000);
     }
     /*按钮*/
-    buts.hover(function () {
-        var count = $(this).index();
-        buts.eq(count).addClass('active').siblings().removeClass('active');
-        index=count;
-        $(".co ul").finish().animate({left:-$(".co ul li").first().width()*count},500)
-    });
-    buts.click(function () {
-        buts.eq($(this).index()).addClass('active').siblings().removeClass('active');
-    });
-    autoplay();
-    $(".co ul").hover(function () {
-        clearInterval(timer);
-    },function(){
-        autoplay();
-    });
+     buts.hover(function () {
+         var count = $(this).index();
+         buts.eq(count).addClass('active').siblings().removeClass('active');
+         index=count;
+         $(".co ul").finish().animate({left:-$(".co ul li").first().width()*count},500)
+     });
+     buts.click(function () {
+         buts.eq($(this).index()).addClass('active').siblings().removeClass('active');
+     });
+     autoplay();
+     $(".co ul").hover(function () {
+         clearInterval(timer);
+     },function(){
+         autoplay();
+     });
 /*---------------------------------------------------------------------*/
     /*第二部分*/
     $(".w_box .containert .hint2 .hgroup1 .hcover").hover(function () {

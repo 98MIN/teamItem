@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="css/lchead.css">
+	<link rel="stylesheet" href="css/shutter.css">
+    <title>优格花园</title>
+</head>
+<style>
+
+
+</style>
+<body>
+
+    <ul class="header">
+
+        <span>
+            <a href="#">
+                <img src="images/logo_03.png" alt="" >
+            </a>
+        </span>
+        <li ><a href="#">首页</a></li>
+
+        <li><a href="https://www.baidu.com" target="_blank">关于优格</a></li>
+
+        <li><a href="#">优格新闻</a>
+        </li>
+
+        <li><a href="#">明星产品</a></li>
+
+        <li><a href="#">店面展示</a></li>
+
+        <li><a href="#">投资创业</a></li>
+
+        <li><a href="#">一车一店</a></li>
+
+        <li><a href="#">联系我们</a></li>
+    </ul>
+
+	<div class="shutter">
+        <div class="shutter-img">
+            <a href="#" data-shutter-title="Iron Man"><img src="images/1.jpg" alt="#"></a>
+            <a href="#" data-shutter-title="Super Man"><img src="images/2.jpg" alt="#"></a>
+            <a href="#" data-shutter-title="The Hulk"><img src="images/3.jpg" alt="#"></a>
+            <a href="#" data-shutter-title="The your"><img src="images/4.jpg" alt="#"></a>
+        </div>
+        <ul class="shutter-btn">
+            <li class="prev" style="border-bottom:0"></li>
+            <li class="next" style="border-bottom:0"></li>
+        </ul>
+   
+    </div>
+
+    <script src="js/jquery-1.11.3.js"></script>
+	<script src="js/velocity.js"></script>
+    <script src="js/shutter.js"></script>
+    <script>
+        $(function () {
+            $('.shutter').shutter({
+                shutterW: 1366, // 容器宽度
+                shutterH: 358, // 容器高度
+                isAutoPlay: true, // 是否自动播放
+                playInterval: 3000, // 自动播放时间
+                curDisplay: 3, // 当前显示页
+                fullPage: false // 是否全屏展示
+            });
+        });
+    </script>
+    
+</body>
+
+</html>

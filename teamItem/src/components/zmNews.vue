@@ -1,5 +1,6 @@
 <template>
     <div id="news">
+    <div class="news">
         <div class="top">
             <img src="../images/news_02.jpg" width="100%" alt="">
         </div>
@@ -20,6 +21,7 @@
              <div class="clearfix buttons">
                     <a href="#">+查看更多</a>
             </div>
+        </div>
         </div>
     </div>
 </template>
@@ -112,6 +114,9 @@ import newsPart from './zmNewsPart';
     
     #news{
         width: 100%;
+        margin-bottom:20px;
+    }
+    .news{
          background:#f1eae8;
     }
     img{
